@@ -68,7 +68,7 @@ def calculate_overall_average_lap_time(lap_times):
     all_times = [time for times in lap_times.values() for time in times]
     return sum(all_times) / len(all_times)
 
-# Function to plot lap times as a pie chart
+# Function to plot fastest lap times as a pie chart
 def plot_lap_times(lap_times):
     drivers = list(lap_times.keys())
     times = [min(times) for times in lap_times.values()]  # Fastest lap times
@@ -82,6 +82,7 @@ def plot_lap_times(lap_times):
     plt.axis('equal')  # Equal aspect ratio ensures the pie chart is circular
     plt.show()
 
+# Function to plot number of laps completed by drivers
 def plot_laps_completed(lap_times):
     drivers = list(lap_times.keys())
     laps_completed = [len(times) for times in lap_times.values()]
